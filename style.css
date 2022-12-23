@@ -1,0 +1,79 @@
+*{
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    position: relative;
+    --main-bg-color: #c3e0d1;
+    --base-bg-color: #fcfbf5;
+    --a-color: #646fd1;
+    --font-color: #362147;
+}
+
+body{
+    box-sizing: border-box;
+}
+
+body *{
+    box-sizing: inherit; /* box-sizingの値は継承されないので明示的に設定 */
+    color: var(--font-color);
+}
+
+a{
+    color: var(--a-color);
+}
+
+.board{
+    text-align: center;
+    height: 100vh;
+}
+
+#port-container{
+    min-height: 100vh;
+    display: grid;
+    grid-template:
+    "title" 250px
+    "items" 1fr
+    "footer" 100px 
+    / 1fr;
+}
+
+#title{
+    grid-area: title;
+    background: var(--main-bg-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#title-word{
+    font-weight: lighter;
+}
+
+.lang{
+    font-size: small;
+}
+
+#items{
+    grid-area: items;
+    padding: 50px 0;
+    background: var(--base-bg-color);
+}
+
+.item{
+    padding: 25px 0;
+}
+
+.chapter-title{
+    padding-bottom: 3px;
+}
+
+#footer{
+    grid-area: footer;
+    background: var(--main-bg-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sns-link{
+    padding: 0 6px;
+}
