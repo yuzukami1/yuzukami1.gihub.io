@@ -10,11 +10,13 @@
 
 body{
     box-sizing: border-box;
+    font-family: monospace;
 }
 
 body *{
     box-sizing: inherit; /* box-sizingの値は継承されないので明示的に設定 */
     color: var(--font-color);
+    letter-spacing: 1px;
 }
 
 a{
@@ -40,12 +42,17 @@ a{
     grid-area: title;
     background: var(--main-bg-color);
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
 #title-word{
     font-weight: lighter;
+}
+
+.title-sub{
+    margin-top: 20px;
 }
 
 .lang{
@@ -63,7 +70,12 @@ a{
 }
 
 .chapter-title{
-    padding-bottom: 3px;
+    font-weight: 600;
+    margin-bottom: 3px;
+}
+
+.content{
+    margin: 10px 0;
 }
 
 #footer{
